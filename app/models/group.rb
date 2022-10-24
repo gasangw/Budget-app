@@ -3,5 +3,5 @@ class Group < ApplicationRecord
   has_many :entity_groups
   has_many :entities, through: :entity_groups
 
-  validate :name, presence: true, length: { minimum: 3 }
+  validates :name, presence: true, length: { minimum: 3 }
 end

@@ -19,7 +19,7 @@
     http://127.0.0.1:3000
 
 - Create a repository
-- clone it using git@github.com:gasangw/Budget-app.git
+- clone it using 'git@github.com:gasangw/Budget-app.git'
 
 
 ## Author
