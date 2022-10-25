@@ -3,7 +3,9 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.all
+    @group = Group.find(params[:group_id])
+    @entities = @group.entities
+    @amount = @entities.sum(:amount)
   end
 
   # GET /entities/1 or /entities/1.json
@@ -14,8 +16,8 @@ class EntitiesController < ApplicationController
     @entity = Entity.new
   end
 
-  # GET /entities/1/edit
-  def edit; end
+  # # GET /entities/1/edit
+  # def edit; end
 
   # POST /entities or /entities.json
   def create
@@ -24,10 +26,8 @@ class EntitiesController < ApplicationController
     respond_to do |format|
       if @entity.save
         format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully created.' }
-        format.json { render :show, status: :created, location: @entity }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @entity.errors, status: :unprocessable_entity }
       end
     end
   end

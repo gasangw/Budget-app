@@ -3,11 +3,15 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = current_user.groups.includes(:entities).all.order('id DESC')
+    @title = 'Transactions'
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @group = current_user.groups.includes(:entities).order('id DESC').find(params[:id])
+    @title = @group.name
+  end
 
   # GET /groups/new
   def new
