@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-    def splash 
-        @app_name = ENV.fetch('APP_NAME', 'Budget-app' )
+    before_action :authenticate_user!, except: [:index]
+    def index
+        @title = 'TomBudge'
     end
 end

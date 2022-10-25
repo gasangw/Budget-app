@@ -1,0 +1,21 @@
+<div class="container">
+  <section class="row text-center mt-4">
+    <h1 class="logo"><%= 'TomBudge' %></h1>
+  </section>
+
+  <div class="row d-flex flex-column mt-4">
+    <% if current_user %>
+      <div class="mt-4">
+        <%= link_to 'Sign Out', destroy_user_session_path, class: 'btn btn-primary bg-purple btn-sm col-12' %>
+      </div>
+    <% else %>
+      <div class="mt-4">
+       <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary bg-purple btn-sm col-12' %>
+      </div>
+      <div class="mt-4">
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary bg-purple btn-sm col-12' %>
+     </div>
+    <% end %>
+  </div>
+
+</div>
