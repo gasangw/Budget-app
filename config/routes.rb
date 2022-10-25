@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'groups#index'
+  root 'home#splash'
 
   devise_for :users
 
