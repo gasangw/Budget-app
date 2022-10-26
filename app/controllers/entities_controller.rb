@@ -19,11 +19,11 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    @entity = Entity.new(entity_params)
+    @entity = current_user.entities.new(entity_params)
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully created.' }
+        format.html { redirect_to group_path(@entity.group_id), notice: 'Entity was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -48,7 +48,7 @@ class EntitiesController < ApplicationController
     @entity.destroy
 
     respond_to do |format|
-      format.html { redirect_to entities_url, notice: 'Entity was successfully destroyed.' }
+      format.html { redirect_to group_url(params[:group_id]), notice: 'Entity was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -62,6 +62,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:name, :amount)
+    params.require(:entity).permit(:name, :amount, :group_id)
   end
 end

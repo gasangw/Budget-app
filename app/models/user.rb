@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
-  has_many :entities
+  has_many :entities, foreign_key: 'user_id'
   has_many :groups, dependent: :destroy
 
   validates :name, presence: true, length: { minimum: 2 }
