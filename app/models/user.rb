@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :confirmable
 
   has_many :entities
-  has_many :groups
+  has_many :groups, dependent: :destroy
 
   validates :name, presence: true, length: { minimum: 2 }
 end

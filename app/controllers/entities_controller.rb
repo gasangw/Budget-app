@@ -3,9 +3,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    # @group = Group.find(params[:group_id])
     @entities = current_user.entities.all
-    # @amount = @entities.sum(:amount)
   end
 
   # GET /entities/1 or /entities/1.json
