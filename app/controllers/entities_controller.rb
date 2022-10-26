@@ -16,9 +16,6 @@ class EntitiesController < ApplicationController
     @entity = Entity.new
   end
 
-  # # GET /entities/1/edit
-  # def edit; end
-
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
