@@ -1,12 +1,12 @@
-<div id="<%= dom_id entity %>">
-  <p>
-    <strong>Name:</strong>
-    <%= entity.name %>
+<% @title = entity.name %>
+<div class="container-flud mx-3 px-2 bg-white border-bottom">
+  <p class="py-2">Transactionº<%= bill.created_at.to_time.to_i %> <br/>
+   <span class="mx-1"><%= entity.created_at %></span>
   </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <span>Amount: $<%= entity.amount %></span>
+</div>
+<div class="container-flud mx-3 px-2 bg-white border-bottom">
+  <p class="py-2 m-0 d-flex justify-content-between">
+    <strong> Amount:</strong>
+    $<%= entity.amount %>
   </p>
-
 </div>

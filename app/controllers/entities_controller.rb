@@ -3,17 +3,20 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @group = Group.find(params[:group_id])
-    @entities = @group.entities
-    @amount = @entities.sum(:amount)
+    # @group = Group.find(params[:group_id])
+    @entities = current_user.entities.all
+    # @amount = @entities.sum(:amount)
   end
 
   # GET /entities/1 or /entities/1.json
-  def show; end
+  def show
+    @entity = current_user.entities.find(params[:id])
+  end
 
   # GET /entities/new
   def new
     @entity = Entity.new
+    @group_id = params[:group_id]
   end
 
   # POST /entities or /entities.json
