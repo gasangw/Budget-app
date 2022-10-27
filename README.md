@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Budget-app
+# TomBudge
 
 - Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
 
@@ -19,7 +19,7 @@
     http://127.0.0.1:3000
 
 - Create a repository
-- clone it using 'git@github.com:gasangw/Budget-app.git'
+- clone it using "git@github.com:gasangw/Budget-app.git"
 
 
 ## Author
