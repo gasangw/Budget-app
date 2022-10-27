@@ -101,7 +101,7 @@ form .form-group .form-control {
 }
 
 ul .menu-slide {
-  width: 80%;
+  width: 40%;
   padding: 16px;
 }
 
@@ -115,10 +115,4 @@ ul .menu-slide {
   margin-left: 6rem;
   font-weight: 800;
   color: #5fb523;
-}
-
-@media screen and (min-width: 767px) {
-  .img-thumbnail {
-    width: 30%;
-  }
 }

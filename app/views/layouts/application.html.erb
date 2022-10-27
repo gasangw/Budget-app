@@ -12,10 +12,21 @@
    
     <script src="https://kit.fontawesome.com/46794738cc.js" crossorigin="anonymous"></script>
     <%= javascript_importmap_tags %>
+    
   </head>
 
   <body>
     <%= render 'nav/navigation' %>
     <%= yield %>
+    <script>
+       const btnToggle = document.querySelectorAll('.toggle-menu');
+
+      function closeMenu() {
+        const menu = document.querySelector('.mobile-menu');
+          menu.classList.toggle('menu-slide');
+      };
+
+      btnToggle.forEach((btn) => { btn.addEventListener('click', closeMenu); });
+    </script>
   </body>
 </html>
