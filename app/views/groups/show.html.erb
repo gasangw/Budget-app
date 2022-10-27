@@ -1,10 +1,21 @@
 <p style="color: green"><%= notice %></p>
-
+<div class="px-3 d-flex justify-content-end mb-3">
+  Total Amount: $<%= @group.entities.inject(0){ |sum, entity| sum + entity.amount.to_i } %>
+</div>
 <%= render @group %>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
+<div class="container-fluid d-flex mb-3">
+<% if can? :update, @group %>
+  <%= link_to "Edit this group", edit_group_path(@group), class: 'mx-1' %> |
+<% end %>
+  <%= link_to "Back to groups", groups_path, class: 'mx-1' %>
+<% if can? :destroy, @group %>
+  | <%= button_to "Delete", @group, method: :delete, class: 'mx-1 border-0 text-primary' %>
+<% end %>
+</div>
 
-  <%= button_to "Destroy this group", @group, method: :delete %>
+<%= render 'entity', entities: @group.entities %>
+
+<div class="bg-green p-3 w-100 position-fixed bottom-0">
+  <%= link_to "Add a New Entity", new_group_entity_path(@group.id), class: 'btn bg-green fw-bold col-12 text-uppercase' %>
 </div>
