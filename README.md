@@ -21,6 +21,13 @@
 - Create a repository
 - clone it using "git@github.com:gasangw/Budget-app.git"
 
+## Live Demo
+
+- [link]()
+
+## Live video
+
+- [link]()
 
 ## Author
 
