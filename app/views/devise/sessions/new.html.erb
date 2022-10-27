@@ -1,5 +1,5 @@
 <% @title = 'Log in' %>
-<div class="container mt-3">
+<div class="pages">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field form-group mb-3 mt-3 px-3">
     <%= f.label :email %><br />
@@ -12,9 +12,9 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field form-group px-3">
+    <div class="field remember">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :remember_me, class: 'word'%>
     </div>
   <% end %>
 
@@ -23,6 +23,6 @@
   </div>
 <% end %>
 </div>
-<div class="container text-center">
+<div class="others container text-center">
 <%= render "devise/shared/links" %>
 </div>
