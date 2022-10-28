@@ -1,0 +1,28 @@
+<div class="container mt-3">
+<%= form_with(model: group) do |form| %>
+  <% if group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group mb-3">
+    <%= form.text_field :name, class: 'form-control', placeholder: 'enter name...' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :icon, style: "display: block" %>
+    <%= form.text_field :icon, accept: 'image/png,image/gif,image/jpeg,image/jpg', required: true, class: 'form-control', placeholder: 'Enter your icon' %>
+  </div>
+
+  <div>
+    <%= form.submit  'Save Category', class: 'btn btn-sm bg-blue col-12' %>
+  </div>
+<% end %>
+</div>

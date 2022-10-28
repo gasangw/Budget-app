@@ -1,24 +1,57 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# TomBudge
 
-Things you may want to cover:
+- Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
 
-* Ruby version
 
-* System dependencies
+## Built With
 
-* Configuration
+- Rails
 
-* Database creation
+## Getting Started
 
-* Database initialization
+- Install rails app 
+    rails new project
+-Run the app
+     rails s
+- Open your default browser and run
+    http://127.0.0.1:3000
 
-* How to run the test suite
+- Create a repository
+- clone it using "git@github.com:gasangw/Budget-app.git"
 
-* Services (job queues, cache servers, search engines, etc.)
+## Live Demo
 
-* Deployment instructions
+- [link](https://lit-peak-99215.herokuapp.com/)
 
-* ...
+## Live video
+
+- [link](https://www.loom.com/share/ae71513dd9054d8286056052dd089dea)
+
+## Author
+
+👤 **Gasangwa Thomas**
+
+- GitHub: [@githubhandle](https://github.com/gasangw)
+- Twitter: [@twitterhandle](https://twitter.com/ThomasGasangwa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gasangwa-thomas-84197222a/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/gasangw/Budget-app/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+This project is [MIT](https://creativecommons.org/licenses/by-nc/4.0/) licensed.

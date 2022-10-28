@@ -1,6 +1,12 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# frozen_string_literal: true
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  default_url_options :host => "example.com"
+  # resources :group_entities
+  root 'pens#index'
+  devise_for :users
+  resources :groups do
+    resources :entities
+  end
+  resources :users
 end

@@ -1,0 +1,12 @@
+<% @title = entity.name %>
+<div class="container-flud mx-3 px-2 bg-white border-bottom">
+  <p class="py-2">Transactionº<%= entity.created_at.to_time.to_i %> <br/>
+   <span class="mx-1"><%= entity.created_at %></span>
+  </p>
+</div>
+<div class="container-flud mx-3 px-2 bg-white border-bottom">
+  <p class="py-2 m-0 d-flex justify-content-between">
+    <strong> Amount:</strong>
+    $<%= entity.amount %>
+  </p>
+</div>
