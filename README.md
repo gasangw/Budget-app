@@ -23,7 +23,7 @@
 
 ## Live Demo
 
-- [link](https://immense-coast-55009.herokuapp.com/)
+- [link](https://lit-peak-99215.herokuapp.com/)
 
 ## Live video
 
